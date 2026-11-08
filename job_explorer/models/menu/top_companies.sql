@@ -1,5 +1,6 @@
 -- Who hires the most data people? One row per company
 {# TODO: filter out job boards like Jobs via Dice#}
+{{ config(materialized='table')}}
 {% set top_n = 50 %}
 SELECT 
     COUNT(*) AS postings,

@@ -1,3 +1,5 @@
+{{ config(materialized='ephemeral')}}
+
 SELECT job_id, search_term AS role, company_name, job_salary,
 CASE
     WHEN job_salary LIKE '%a year' THEN 'year'

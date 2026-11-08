@@ -48,3 +48,23 @@ models:
     columns:
       - name: skill_keyword
         description: "Skill keyword, for example sql or python."
+  - name: role_scorecard
+    description: "One row per role. Compare postings, remote share and salary share before you pick a role to chase."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: role
+        description: "The role searched for: Data Analyst, Data Engineer or Data Scientist."
+  - name: skills_by_role
+    description: "one row per role and skill keyword"
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: role
+        description: "The role searched for: Data Analyst, Data Engineer or Data Scientist."
+      - name: skill_keyword
+        description: "The keyword searched for"
