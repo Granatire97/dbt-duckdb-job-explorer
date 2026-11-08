@@ -1,0 +1,10 @@
+models:
+  - name: top_companies
+    description: "Jobs via Dice, beBeeData, Online Surveys, ExecutivePlacements.com, The Elite Job and VirtualVocations are filtered out. They repost from other firms"
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: company_name
+        description: "Hiring company (the six job boards removed)"

@@ -1,4 +1,6 @@
 name: job_explorer
+version: "1.0.0"
+config-version: 2
 
 profile: job_explorer
 
