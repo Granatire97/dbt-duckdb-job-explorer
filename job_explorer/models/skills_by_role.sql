@@ -1,6 +1,7 @@
 SELECT
     postings.search_term AS role,
     skills.skill_keyword,
+    postings.search_term || ' | ' || skills.skill_keyword AS role_skill,
     COUNT(DISTINCT skills.job_id) AS jobs
 FROM {{ source('raw', 'job_skills') }} AS skills
 JOIN {{ ref('postings') }} AS postings

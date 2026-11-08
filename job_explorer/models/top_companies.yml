@@ -8,3 +8,6 @@ models:
     columns:
       - name: company_name
         description: "Hiring company (the six job boards removed)"
+        data_tests:
+          - not_null
+          - unique
